@@ -1,0 +1,68 @@
+.calculator {
+  display: inline-block;
+  border: 2px solid #333;
+  padding: 5px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+button {
+  font-size: 1em;
+  padding: 2px;
+  cursor: pointer;
+}
+button:nth-child(17), button:nth-child(18), button:nth-child(19) {
+  grid-column: span 3; /* Estendi alcune operazioni avanzate */
+}
+.card-header {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+button {
+  font-size: 1.2rem;
+  padding: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  color: #f10909; /* Colore del testo */
+  border: none;
+  border-radius: 50px;
+  background-color: #79787e; /* Colore sfondo */
+  box-shadow: 2px 2px 5px rgba(202, 11, 11, 0.1); /* Ombra per effetto 3D */
+  width: 95%;
+
+  &:hover {
+    background-color: #58555a; /* Colore sfondo al passaggio del mouse */
+  }
+}
+
+input {
+  background-color: #f8f9fa;
+  border: 1px solid #3316b3;
+  border-radius: 50px;
+  width: 200px;
+  font-size: 4.5em;
+}
+.calcolatrice {
+    margin: auto !important;
+    text-align: center;
+    border-radius: 10px; /* Arrotonda gli angoli */
+    background-color: #23917f; /* Colore di sfondo */
+    padding: 10px; /* Spaziatura interna */
+    box-shadow: 5px 4px 8px rgba(212, 17, 17, 0.1); /* Ombra per effetto 3D */
+    width: 300px; /* Larghezza del div */
+    height: 400px; /* Altezza del div */
+}

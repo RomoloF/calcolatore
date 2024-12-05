@@ -1,0 +1,113 @@
+<div class="calcolatrice">
+  <div class="container mt-2">
+    <div class="card mx-auto" style="max-width: 400px">
+      <div class="card-header bg-primary text-white text-center">
+        <h3>Calcolatrice Avanzata</h3>
+      </div>
+      <div class="card-body">
+        <!-- Display -->
+        <div class="mb-xl-4">
+          <input
+            type="text"
+            class="form-control text-end"
+            [(ngModel)]="display"
+            readonly
+            placeholder="0"
+            style="font-size: 1rem"
+          />
+        </div>
+
+        <div class="buttons" >
+          <!-- Numeri e Operazioni Base -->
+          <button
+            *ngFor="let btn of ['7', '8', '9', '+']"
+            (click)="addToDisplay(btn)"
+          >
+            {{ btn }}
+          </button>
+          <button
+            *ngFor="let btn of ['4', '5', '6', '-']"
+            (click)="addToDisplay(btn)"
+          >
+            {{ btn }}
+          </button>
+          <button
+            *ngFor="let btn of ['1', '2', '3', '*']"
+            (click)="addToDisplay(btn)"
+          >
+            {{ btn }}
+          </button>
+          <button
+            *ngFor="let btn of ['0', '.', '=', '/']"
+            (click)="btn === '=' ? calculate() : addToDisplay(btn)"
+          >
+            {{ btn }}
+          </button>
+
+          <!-- Operazioni Avanzate -->
+          <div></div>
+          <div class="col-6 p-1">
+            <button
+            class="btn btn-warning w-100"
+             data-bs-toggle="tooltip"
+             data-bs-placement="top"
+             title="Questo è un tooltip"
+            (click)="power()">x²</button>
+          </div>
+          <div class="col-6- p-1">
+            <button class="btn btn-warning w-100" (click)="squareRoot()">
+              √x
+            </button>
+          </div>
+          <div class="col-6 p-1">
+            <button class="btn btn-info w-100" (click)="logarithm()">
+              ln(x)
+            </button>
+          </div>
+          <div class="col-6 p-1">
+            <button class="btn btn-info w-100" (click)="log10()">
+              log₁₀(x)
+            </button>
+          </div>
+          <div class="col-6 p-1">
+            <button class="btn btn-primary w-100" (click)="sin()">
+              sin(x)
+            </button>
+          </div>
+          <div class="col-6 p-1">
+            <button class="btn btn-primary w-100" (click)="cos()">
+              cos(x)
+            </button>
+          </div>
+          <div class="col-6 p-1">
+            <button class="btn btn-primary w-100" (click)="tan()">
+              tan(x)
+            </button>
+          </div>
+          <div class="col-6 p-1">
+            <button class="btn btn-secondary w-100" (click)="exp()">
+              exp(x)
+            </button>
+          </div>
+          <div class="col-6 p-1">
+            <button class="btn btn-danger w-100" (click)="clear()">C</button>
+          </div>
+          <div class="col-6 p-1">
+            <button class="btn btn-dark w-100" (click)="asin()">asin(x)</button>
+          </div>
+          <div class="col-6 p-1">
+            <button class="btn btn-dark w-100" (click)="acos()">acos(x)</button>
+          </div>
+          <div class="col-6 p-1">
+            <button class="btn btn-dark w-100" (click)="atan()">atan(x)</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer text-center">
+        <div class="card-footer text-center">
+          <small>Creata da Romolo Fiorenza </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+img {
+
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+  border: 2px solid hwb(0 0% 100% / 0.212);
+  box-shadow: 0 0 5px rgba(199, 13, 13, 0.5);
+  transition: all 3.3s ease;
+  transform: rotate(360deg);
+}
+

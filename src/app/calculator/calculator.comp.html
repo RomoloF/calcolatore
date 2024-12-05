@@ -1,0 +1,113 @@
+<div class="calcolatrice">
+  <div class="container mt-4">
+    <div class="card mx-auto shadow-lg" style="max-width: 400px;">
+      <div class="card-header bg-primary text-white text-center">
+        <h3>Calcolatrice Avanzata</h3>
+      </div>
+      <div class="card-body">
+        <!-- Display -->
+        <div class="mb-4">
+          <input
+            type="text"
+            class="form-control text-end rounded-pill p-2"
+            [(ngModel)]="display"
+            readonly
+            placeholder="0"
+            style="font-size: 1.25rem;"
+          />
+        </div>
+
+        <!-- Griglia Pulsanti -->
+        <div class="mb-3">
+          <!-- Riga 1 -->
+          <div class="row g-2">
+            <div class="col-3">
+              <button class="btn btn-light rounded-circle w-100" (click)="addToDisplay('7')">7</button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-light rounded-circle w-100" (click)="addToDisplay('8')">8</button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-light rounded-circle w-100" (click)="addToDisplay('9')">9</button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-primary rounded-circle w-100" (click)="addToDisplay('+')">+</button>
+            </div>
+          </div>
+          <!-- Riga 2 -->
+          <div class="row g-2 mt-2">
+            <div class="col-3">
+              <button class="btn btn-light rounded-circle w-100" (click)="addToDisplay('4')">4</button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-light rounded-circle w-100" (click)="addToDisplay('5')">5</button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-light rounded-circle w-100" (click)="addToDisplay('6')">6</button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-primary rounded-circle w-100" (click)="addToDisplay('-')">-</button>
+            </div>
+          </div>
+          <!-- Riga 3 -->
+          <div class="row g-2 mt-2">
+            <div class="col-3">
+              <button class="btn btn-light rounded-circle w-100" (click)="addToDisplay('1')">1</button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-light rounded-circle w-100" (click)="addToDisplay('2')">2</button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-light rounded-circle w-100" (click)="addToDisplay('3')">3</button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-primary rounded-circle w-100" (click)="addToDisplay('*')">*</button>
+            </div>
+          </div>
+          <!-- Riga 4 -->
+          <div class="row g-2 mt-2">
+            <div class="col-3">
+              <button class="btn btn-light rounded-circle w-100" (click)="addToDisplay('0')">0</button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-light rounded-circle w-100" (click)="addToDisplay('.')">.</button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-success rounded-circle w-100" (click)="calculate()">=</button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-primary rounded-circle w-100" (click)="addToDisplay('/')">/</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pulsanti Avanzati -->
+        <div class="row g-2 mt-3">
+          <div class="col-4">
+            <button class="btn btn-warning rounded-circle w-100" (click)="power()">x²</button>
+          </div>
+          <div class="col-4">
+            <button class="btn btn-warning rounded-circle w-100" (click)="squareRoot()">√x</button>
+          </div>
+          <div class="col-4">
+            <button class="btn btn-info rounded-circle w-100" (click)="logarithm()">ln(x)</button>
+          </div>
+        </div>
+        <div class="row g-2 mt-2">
+          <div class="col-4">
+            <button class="btn btn-info rounded-circle w-100" (click)="log10()">log₁₀(x)</button>
+          </div>
+          <div class="col-4">
+            <button class="btn btn-primary rounded-circle w-100" (click)="sin()">sin(x)</button>
+          </div>
+          <div class="col-4">
+            <button class="btn btn-primary rounded-circle w-100" (click)="cos()">cos(x)</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer text-center">
+        <small>Creata da Romolo Fiorenza</small>
+      </div>
+    </div>
+  </div>
+</div>
